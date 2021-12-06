@@ -21,6 +21,7 @@ $(window).on('load', function() {
 		const randomNumber = getRandomNumber();
 		targetKey = allKeys[randomNumber];
 		setTimeout(function() {
+			$('.key').removeClass('correct');
 			vibrateKey(targetKey);
 		}, 3000);
 	}
@@ -33,12 +34,15 @@ $(window).on('load', function() {
 
 	$('.key').click(function() {
 		if ((this.dataset["key"] === $ele[0].dataset["key"]) && keyIsVibrating) {
+			$ele.addClass('correct');
 			stopVibrating();
 		}
 	});
 
 	$(document).on('keypress', function(e) {
+		console.log(e);
 		if ((e.key.toUpperCase() === $ele[0].dataset["key"]) && keyIsVibrating) {
+			$ele.addClass('correct');
 			stopVibrating();
 		}
 	});

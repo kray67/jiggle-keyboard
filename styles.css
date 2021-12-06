@@ -57,6 +57,8 @@ h1 {
   padding: 18px 24px;
   height: 65px;
   box-sizing: border-box;
+
+  transition: background ease 0.5s, color ease 0.5s;
 }
 
 .utility {
@@ -65,8 +67,13 @@ h1 {
 }
 
 .key:hover {
-  background:  #ffd200;
+  background: #ffd200;
   color: black;
+}
+
+.correct {
+	background: #66e066;
+	color: #fff;
 }
 
 .jiggle {
