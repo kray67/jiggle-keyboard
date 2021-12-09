@@ -40,7 +40,6 @@ $(window).on('load', function() {
 	});
 
 	$(document).on('keypress', function(e) {
-		console.log(e);
 		if ((e.key.toUpperCase() === $ele[0].dataset["key"]) && keyIsVibrating) {
 			$ele.addClass('correct');
 			stopVibrating();
